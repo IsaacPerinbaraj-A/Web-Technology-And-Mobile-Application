@@ -1,0 +1,47 @@
+/*External CSS*/
+
+a {
+    color: darkred;
+    font-weight: bold;
+    text-decoration: none;
+    box-sizing: content-box;
+    margin: 15px;
+    padding: 5px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+iframe {
+    border: 2px solid black;
+    margin: 20px;
+    width: 75%;
+    height: 400px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.map-box {
+    width: 50%;
+    text-align: center;
+    background-color: slategray;
+    border-radius: 10px;
+}
+
+.frame-box {
+    width: 50%;
+    text-align: center;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.center {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
