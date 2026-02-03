@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chennai Map with Hotspots</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Internal CSS -->
+    <style>
+        h1 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        body {
+            background-color: gainsboro;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Experiment 1 - Web Page Creation using HTML</h1>
+    <p style="text-align:center; font-size:16px;">  <!-- Inline CSS -->
+        Click on different areas of the map to explore locations.
+    </p>
+    <div class="container">
+        <div class="map-box">
+            <h3>Chennai Map </h3>
+            <img src="chennai-map.png" usemap="#chennai" width="500" height="400"> 
+            <map name="chennai">
+                <area shape="rect" coords="100,250,200,350" 
+                href="https://www.google.com/maps?q=Chennai+International+Airport&output=embed"
+                target="mapFrame">
+                <area shape="rect" coords="200,100,300,200" 
+                    href="https://www.google.com/maps?q=Koyambedu+Chennai&output=embed"
+                    target="mapFrame">
+                <area shape="rect" coords="350,100,495,200" 
+                    href="https://www.google.com/maps?q=Parrys+Corner+Chennai&output=embed"
+                    target="mapFrame">
+                <area shape="rect" coords="250,200,350,300" 
+                    href="https://www.google.com/maps?q=Guindy+Chennai&output=embed"
+                    target="mapFrame">
+            </map>
+        </div>
+        <div class="frame-box">
+            <h3>Google Map (Chennai) I-Frame</h3>
+            <iframe name="mapFrame"
+                    src="https://www.google.com/maps?q=Chennai&output=embed"></iframe>
+        </div>
+    </div>
+    <div class="center">
+        <a href="https://tn.gov.in" target="_blank">TamilNadu Government</a> |
+        <a href="https://rajalakshmi.org" target="_blank">Rajalakshmi Engineering College</a> |
+        <a href="https://www.google.com/maps?q=Chennai&output=embed" 
+           target="mapFrame">Back to Chennai Map
+        </a>
+    </div>
+</body>
+</html>
