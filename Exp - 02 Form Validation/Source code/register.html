@@ -3,72 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Registration Form</title>
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .form-box {
-      background: #fff;
-      padding: 30px 35px;
-      border-radius: 10px;
-      width: 380px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    label {
-      font-size: 14px;
-      margin-top: 10px;
-      display: block;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      font-size: 14px;
-    }
-
-    textarea {
-      resize: none;
-      height: 70px;
-    }
-
-    button {
-      width: 100%;
-      margin-top: 20px;
-      padding: 12px;
-      border: none;
-      background: #007bff;
-      color: white;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background: #0056b3;
-    }
-  </style>
+  <link rel="stylesheet" href="register.css">
 </head>
 
 <body>
-
 <div class="form-box">
   <h2>Registration Form</h2>
 
@@ -95,65 +33,6 @@
     <button type="submit">Register</button>
   </form>
 </div>
-
-<script>
-document.getElementById("form").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  let fname = document.getElementById("fname").value.trim();
-  let lname = document.getElementById("lname").value.trim();
-  let password = document.getElementById("password").value.trim();
-  let email = document.getElementById("email").value.trim();
-  let mobile = document.getElementById("mobile").value.trim();
-  let address = document.getElementById("address").value.trim();
-
-
-  let namePattern = /^[A-Za-z]+$/;
-  if (!namePattern.test(fname)) {
-    alert("First Name must contain only alphabets");
-    return;
-  }
-  if (fname.length < 6) {
-    alert("First Name must be at least 6 characters");
-    return;
-  }
-
-  if (password.length < 6) {
-    alert("Password must be at least 6 characters");
-    return;
-  }
-
-  let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-  if (!emailPattern.test(email)) {
-    alert("Enter valid Email");
-    return;
-  }
-
-  let mobilePattern = /^[0-9]{10}$/;
-  if (!mobilePattern.test(mobile)) {
-    alert("Mobile must be exactly 10 digits");
-    return;
-  }
-
-  if (lname === "") {
-    alert("Last Name cannot be empty");
-    return;
-  }
-
-  if (address === "") {
-    alert("Address cannot be empty");
-    return;
-  }
-
-  localStorage.setItem("fname", fname);
-  localStorage.setItem("lname", lname);
-  localStorage.setItem("email", email);
-  localStorage.setItem("mobile", mobile);
-  localStorage.setItem("address", address);
-
-  window.location.href = "success.html";
-});
-</script>
-
+<script src="register.js"></script>
 </body>
 </html>
