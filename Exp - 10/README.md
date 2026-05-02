@@ -366,4 +366,6 @@ For issues or questions, please check the code comments and documentation within
 
 ---
 
-**Built with ❤️ - A complete Smart Parking Management System**
+**Built by ISAAC PERINBARAJ A**
+---
+**A complete Smart Parking Management System**
